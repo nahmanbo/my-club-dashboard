@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Header from "./components/Header";
 import { FilterBar, ActiveToggle, LayoutSwitch } from "./components/FilterBar";
+import MembersContainer from "./components/MembersContainer";
 
 type Layout = "list" | "grid";
 
@@ -19,6 +20,7 @@ export default function App() {
           onShowOnlyActiveChange={setShowOnlyActive}
         />
       </FilterBar>
+      <MembersContainer></MembersContainer>
     </>
   );
 }
