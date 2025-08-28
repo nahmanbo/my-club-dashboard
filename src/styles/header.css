@@ -1,0 +1,13 @@
+header {
+  background-color: var(--card-bg);
+  color: var(--text);
+  padding: 1rem;
+  border-bottom: var(--border);
+  box-shadow: var(--shadow);
+}
+
+.main-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
