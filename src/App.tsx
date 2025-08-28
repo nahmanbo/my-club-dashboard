@@ -1,14 +1,24 @@
-import './App.css'
-import Header from './components/Header'
+import "./App.css";
+import { useState } from "react";
+import Header from "./components/Header";
+import { FilterBar, ActiveToggle, LayoutSwitch } from "./components/FilterBar";
 
+type Layout = "list" | "grid";
 
-function App() {
+export default function App() {
+  const [layout, setLayout] = useState<Layout>("list");
+  const [showOnlyActive, setShowOnlyActive] = useState(false);
 
   return (
     <>
-<Header headerText="Campus Club Dashboard" />
-</>
-  )
+      <Header headerText="Campus Club Dashboard" />
+      <FilterBar>
+        <LayoutSwitch layout={layout} onLayoutChange={setLayout} />
+        <ActiveToggle
+          showOnlyActive={showOnlyActive}
+          onShowOnlyActiveChange={setShowOnlyActive}
+        />
+      </FilterBar>
+    </>
+  );
 }
-
-export default App
