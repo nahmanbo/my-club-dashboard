@@ -1,0 +1,50 @@
+/* Card */
+.member-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .75rem 1rem;
+    border: 2px solid var(--border-color, #2d2d2d);
+    border-radius: var(--radius);
+    background: var(--card-bg);
+    color: var(--text);
+    box-shadow: var(--shadow);
+  }
+  .member-card.inactive { opacity: .6; }
+  
+  /* Border color by role */
+  .member-card.leader { border-color: var(--leader); }
+  .member-card.member { border-color: var(--member); }
+  .member-card.guest  { border-color: var(--guest);  }
+  
+  /* Avatar with role-colored ring */
+  .avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid;
+  }
+  .member-card.leader .avatar { border-color: var(--leader); }
+  .member-card.member .avatar { border-color: var(--member); }
+  .member-card.guest  .avatar { border-color: var(--guest);  }
+  
+  /* Info */
+  .info { flex: 1; }
+  .name { margin: 0; font-weight: 700; }
+  .role { margin: 0; font-size: .9rem; color: var(--muted); }
+  
+  /* Button by role */
+  .role-btn {
+    padding: .4rem .8rem;
+    border: none;
+    border-radius: var(--radius);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .15s ease;
+  }
+  .role-btn:disabled { opacity: .5; cursor: not-allowed; }
+  .role-btn.leader { background: var(--leader); }
+  .role-btn.member { background: var(--member); }
+  .role-btn.guest  { background: var(--guest);  }
+  

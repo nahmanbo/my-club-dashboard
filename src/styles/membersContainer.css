@@ -1,8 +1,20 @@
-.members-container{
-    background-color: blueviolet;
+/* src/styles/membersContainer.css */
+.members-container {
+    gap: 1rem;
+    padding: 24px;
+  }
+  
+  /* List = Flex (טור) */
+  .members-container.list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Grid = רשת מתרחבת */
+  .members-container.grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    padding: 24px;
-    margin: 0 20px;
+    align-items: start;
   }
+  

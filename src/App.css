@@ -9,6 +9,10 @@
   --radius: 12px;
   --shadow: 0 4px 14px rgba(0,0,0,0.6);
   --border: 1px solid #2d2d2d;
+
+  --leader: #3b82f6; /* blue */
+  --member: #22c55e; /* green */
+  --guest:  #a855f7; /* purple */
 }
 
 #root {
